@@ -20,6 +20,11 @@ body{
   height: 100%;
   width: 90%;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+#specials{
+  padding-bottom: 105px;
 }
 
 .left{
@@ -109,6 +114,10 @@ h2{
   padding: 83px 0;
 }
 
+#specials h4{
+  line-height: 230%;
+}
+
 .item-specials{
   display: inline-block;
   width: 33%;
@@ -140,7 +149,7 @@ h2{
 }
 
 .item-specials:hover hr{
-  width: 1px;
+  width: 0px;
   -webkit-transition-duration: 1s;
   -o-transition-duration: 1s;
   -moz-transition-duration: 1s;
@@ -149,22 +158,6 @@ h2{
 
 .item-specials{
   font-weight: lighter;
-}
-
-.item-specials p{
-  position: relative;
-  top: 80px;
-}
-
-.item-specials h4{
-  position: relative;
-  top: 60px;
-}
-
-.cost{
-  font-weight: bold;
-  position: relative;
-  top: 88px;
 }
 
 #about{
@@ -230,6 +223,10 @@ h2{
   font-weight: lighter;
 }
 
+.menu-category:not(.active){
+  display: none;
+}
+
 footer{
   background: url(../img/contact-background.png) no-repeat left top, #eeefef;
   height: 965px;
@@ -240,14 +237,15 @@ footer{
   margin-top: 70px;
 }
 
-#contact address p{
+#contact address td{
   text-transform: uppercase;
   font-size: 18px;
   line-height: 150%;
+  vertical-align: top;
 }
 
-#contact address p:nth-child(2){
-  margin-left: 14%;
+#contact address td:nth-child(2){
+  padding-left: 20%;
 }
 
 #contact address span{
@@ -269,6 +267,8 @@ footer{
 
 #contact aside{
   width: 46%;
+  position: relative;
+  height: 100%;
 }
 
 #contact form{
@@ -288,7 +288,15 @@ footer{
   padding: 12px 23px;
   font-size: 18px;
   font-style: italic;
-  outline-color: #000;
+  outline-color: #fff;
+}
+
+.one-two-width input{
+  width: 77%;
+}
+
+#message{
+  width: 91%;
 }
 
 .one-two-width{
@@ -301,16 +309,13 @@ footer{
   margin-left: 13%;
 }
 
-#message{
-  width: 93%;
-}
-
 input#submit{
   border: 1px solid #3c3c3c;
   display: block;
   margin: 25px auto 0;
   cursor: pointer;
   outline: none;
+  width: 30%;
 }
 
 input#submit:hover{
@@ -318,8 +323,9 @@ input#submit:hover{
 }
 
 .share{
-  margin-top: 185px;
-  float: right;
+  position: absolute;
+  bottom: 32px;
+  right: 0;
 }
 
 .social{
@@ -343,4 +349,12 @@ input#submit:hover{
 
 .social-inst:hover{
   background: url(../img/inst.png) no-repeat, #fff;
+}
+
+#menu ul{
+    padding: 0;
+    list-style: none;
+}
+#menu .dish:after{
+    content: leader(dotted);
 }
