@@ -1,3 +1,6 @@
+
+'use strict'
+
 function selectMenuPage() {
   var link = document.getElementById( 'pseudo-menu' ).children;
   var table = document.getElementsByClassName( 'menu-category' );
@@ -5,12 +8,12 @@ function selectMenuPage() {
 
   for (var i = 0; i < link.length; i++) {
     //Добавляем псевдоссылки в массив
-    let arrValue = link[i].firstChild.innerHTML;
+    var arrValue = link[i].firstChild.innerHTML;
     arrayLinks.push(arrValue);
 
     link[i].firstChild.onclick = function changeMenuPage() {
-      let a = this.innerHTML.toString();
-      let index = arrayLinks.indexOf(a);
+      var a = this.innerHTML.toString();
+      var index = arrayLinks.indexOf(a);
 
       document.querySelector( '#pseudo-menu .active' ).classList.remove( 'active' );
       document.querySelector( '.menu-category.active' ).classList.remove( 'active' );
@@ -20,7 +23,7 @@ function selectMenuPage() {
 
       return false;
     };
-  };
-};
+  }
+}
 
 selectMenuPage();

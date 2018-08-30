@@ -1,0 +1,10 @@
+{
+    "root": true,
+    "extends": "eslint:recommended",
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "strict": [2, "global"]
+    }
+}
